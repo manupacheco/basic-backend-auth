@@ -6,7 +6,7 @@ const User = require('../models/user');
 const { isLoggedIn } = require('../helpers/is-logged');
 
 router.get('/me', (req, res, next) => {
-  console.log('me', req.session.currentUser);
+  // console.log('me', req.session.currentUser);
   if (req.session.currentUser) {
     res.json(req.session.currentUser);
   } else {
